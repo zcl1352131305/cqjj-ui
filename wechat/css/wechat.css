@@ -1,8 +1,13 @@
+body{
+	height:100%;
+	overflow:hidden
+}
 .wechat-header{
 	text-align: center;
 	height: 50px;
 	box-shadow: 0 1px 6px #ccc;
-    position: fixed;
+    position: absolute;
+    top: 0;
     right: 0;
     left: 0;
     z-index: 10;
@@ -16,7 +21,9 @@
 .wechat-content{
 	width: 100%;
 	height: auto;
-	padding-top: 50px;
+	margin-top: 50px;
+	height:calc(100vh);
+	overflow: scroll;
 }
 header .icon-back{
 	position: absolute;

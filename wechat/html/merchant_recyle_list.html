@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html class="pixel-ratio-3 retina android android-5 android-5-0">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+		<title></title>
+		<link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.2/style/weui.min.css">
+		<link rel="stylesheet" href="https://cdn.bootcss.com/jquery-weui/1.2.0/css/jquery-weui.min.css">
+		<link rel="stylesheet" href="../css/font-awesome.css">
+		<link rel="stylesheet" href="../css/wechat-info-list.css">
+		<link rel="stylesheet" href="../css/wechat.css">
+		<style type="text/css">
+			
+			.weui-media-box__title {
+				height: 36px;
+				white-space: normal;
+				line-height: 17px;
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 2;
+				overflow: hidden;
+			}
+			
+			.weui-media-box {
+				padding: 10px;
+				position: relative;
+			}
+			
+			.wechat-content-price {
+				font-size: 18px;
+				color: #FF4040;
+				font-weight: bold;
+				height: 44px;
+				width: 100px;
+				float: left;
+			}
+			
+			.wechat-content-option {
+				width: 100%;
+				height: 44px;
+				line-height: 44px;
+			}
+			
+			.wechat-content-btnGroup {
+				height: 44px;
+				float: right;
+			}
+			
+			.wechat-content-option button {
+				width: auto;
+				height: 20px;
+				padding: 0 5px 0 5px;
+				border: 1px solid #1AAD19;
+				border-radius: 5px;
+				background: #fff;
+				color: #1AAD19;
+			}
+			
+			.wechat-content-address {
+				height: 20px;
+				font-size: 10px;
+				color: #bbb;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+			/* 搜索相关 */
+			
+			.weui-search-bar {
+				width: 70%;
+				margin: auto;
+				height: 50px;
+				background: #fff;
+			}
+			.weui-search-bar__cancel-btn {
+				line-height: 34px;
+			}
+			.weui-search-bar__box .weui-icon-search {
+				line-height: 34px;
+			}
+			.weui-search-bar__box .weui-search-bar__input {
+				height: 34px;
+				padding: 0;
+				line-height: 34px;
+			}
+			.weui-search-bar__label {
+				top: 3px
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<header class="wechat-header">
+			<a class="icon-back"><i class="fa fa-chevron-left"></i></a>
+			<div class="weui-search-bar" id="searchBar">
+				<form class="weui-search-bar__form">
+					<div class="weui-search-bar__box">
+						<i class="weui-icon-search"></i>
+						<input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索" required="">
+						<a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+					</div>
+					<label class="weui-search-bar__label" id="searchText">
+			      <i class="weui-icon-search"></i>
+			      <span>搜索</span>
+			    </label>
+				</form>
+				<a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">取消</a>
+			</div>
+		</header>
+
+		<div class="wechat-content" style="margin-top: 0px;">
+			<div class="weui-pull-to-refresh__layer">
+				<div class='weui-pull-to-refresh__arrow'></div>
+				<div class='weui-pull-to-refresh__preloader'></div>
+				<div class="down">下拉刷新</div>
+				<div class="up">释放刷新</div>
+				<div class="refresh">正在刷新</div>
+			</div>
+
+			<div class="weui-panel weui-panel_access">
+				<div class="weui-panel__bd">
+					<!-- 图文列表1 -->
+					<div class="weui-media-box weui-media-box_appmsg">
+						<div class="weui-media-box__hd">
+							<img class="weui-media-box__thumb" src="http://pic.58pic.com/58pic/13/66/22/58x58PICXTV_1024.jpg">
+						</div>
+						<div class="weui-media-box__bd">
+							<h4 class="weui-media-box__title">渝中区解放西路家具搬迁家具搬迁，便宜渝中区解放西路家具搬迁家具搬迁，便渝中区解放西路家具搬迁家具搬迁，便出，便宜出售</h4>
+							<div class="wechat-content-option" style="">
+								<div class="wechat-content-price">¥500.00</div>
+								<div class="wechat-content-btnGroup">
+									<button><i class="fa fa-phone"></i> 邹朝亮</button>
+								</div>
+							</div>
+							<p class="wechat-content-address" style=""><i class="fa fa-map-marker"></i> 重庆市渝中区解放西路66号16栋重庆市渝中区解放西路66号16栋</p>
+						</div>
+					</div>
+
+					<div class="weui-media-box weui-media-box_appmsg">
+						<div class="weui-media-box__hd">
+							<img class="weui-media-box__thumb" src="http://pic.58pic.com/58pic/13/66/22/58x58PICXTV_1024.jpg">
+						</div>
+						<div class="weui-media-box__bd">
+							<h4 class="weui-media-box__title">渝中区解放西路家具搬迁家具搬迁，便宜出，便宜出售</h4>
+							<div class="wechat-content-option" style="">
+								<div class="wechat-content-price">¥500.00</div>
+								<div class="wechat-content-btnGroup">
+									<button><i class="fa fa-phone"></i> 邹朝亮</button>
+								</div>
+							</div>
+							<p class="wechat-content-address" style=""><i class="fa fa-map-marker"></i> 重庆市渝中区解放西路66号16栋重庆市渝中区解放西路66号16栋</p>
+						</div>
+					</div>
+
+					<div class="weui-media-box weui-media-box_appmsg">
+						<div class="weui-media-box__hd">
+							<img class="weui-media-box__thumb" src="http://pic.58pic.com/58pic/13/66/22/58x58PICXTV_1024.jpg">
+						</div>
+						<div class="weui-media-box__bd">
+							<h4 class="weui-media-box__title">渝中区解放西路家具搬迁家具搬迁，便宜出，便宜出售</h4>
+							<div class="wechat-content-option" style="">
+								<div class="wechat-content-price">¥500.00</div>
+								<div class="wechat-content-btnGroup">
+									<button><i class="fa fa-phone"></i> 邹朝亮</button>
+								</div>
+							</div>
+							<p class="wechat-content-address" style=""><i class="fa fa-map-marker"></i> 重庆市渝中区解放西路66号16栋重庆市渝中区解放西路66号16栋</p>
+						</div>
+					</div>
+
+					<div class="weui-media-box weui-media-box_appmsg">
+						<div class="weui-media-box__hd">
+							<img class="weui-media-box__thumb" src="http://pic.58pic.com/58pic/13/66/22/58x58PICXTV_1024.jpg">
+						</div>
+						<div class="weui-media-box__bd">
+							<h4 class="weui-media-box__title">渝中区解放西路家具搬迁家具搬迁，便宜出，便宜出售</h4>
+							<div class="wechat-content-option" style="">
+								<div class="wechat-content-price">¥500.00</div>
+								<div class="wechat-content-btnGroup">
+									<button><i class="fa fa-phone"></i> 邹朝亮</button>
+								</div>
+							</div>
+							<p class="wechat-content-address" style=""><i class="fa fa-map-marker"></i> 重庆市渝中区解放西路66号16栋重庆市渝中区解放西路66号16栋</p>
+						</div>
+					</div>
+					<div class="weui-media-box weui-media-box_appmsg">
+						<div class="weui-media-box__hd">
+							<img class="weui-media-box__thumb" src="http://pic.58pic.com/58pic/13/66/22/58x58PICXTV_1024.jpg">
+						</div>
+						<div class="weui-media-box__bd">
+							<h4 class="weui-media-box__title">渝中区解放西路家具搬迁家具搬迁，便宜出，便宜出售</h4>
+							<div class="wechat-content-option" style="">
+								<div class="wechat-content-price">¥500.00</div>
+								<div class="wechat-content-btnGroup">
+									<button><i class="fa fa-phone"></i> 邹朝亮</button>
+								</div>
+							</div>
+							<p class="wechat-content-address" style=""><i class="fa fa-map-marker"></i> 重庆市渝中区解放西路66号16栋重庆市渝中区解放西路66号16栋</p>
+						</div>
+					</div>
+
+					<div class="weui-media-box weui-media-box_appmsg">
+						<div class="weui-media-box__hd">
+							<img class="weui-media-box__thumb" src="http://pic.58pic.com/58pic/13/66/22/58x58PICXTV_1024.jpg">
+						</div>
+						<div class="weui-media-box__bd">
+							<h4 class="weui-media-box__title">渝中区解放西路家具搬迁家具搬迁，便宜出，便宜出售</h4>
+							<div class="wechat-content-option" style="">
+								<div class="wechat-content-price">¥500.00</div>
+								<div class="wechat-content-btnGroup">
+									<button><i class="fa fa-phone"></i> 邹朝亮</button>
+								</div>
+							</div>
+							<p class="wechat-content-address" style=""><i class="fa fa-map-marker"></i> 重庆市渝中区解放西路66号16栋重庆市渝中区解放西路66号16栋</p>
+						</div>
+					</div>
+					<div class="weui-media-box weui-media-box_appmsg">
+						<div class="weui-media-box__hd">
+							<img class="weui-media-box__thumb" src="http://pic.58pic.com/58pic/13/66/22/58x58PICXTV_1024.jpg">
+						</div>
+						<div class="weui-media-box__bd">
+							<h4 class="weui-media-box__title">渝中区解放西路家具搬迁家具搬迁，便宜出，便宜出售</h4>
+							<div class="wechat-content-option" style="">
+								<div class="wechat-content-price">¥500.00</div>
+								<div class="wechat-content-btnGroup">
+									<button><i class="fa fa-phone"></i> 邹朝亮</button>
+								</div>
+							</div>
+							<p class="wechat-content-address" style=""><i class="fa fa-map-marker"></i> 重庆市渝中区解放西路66号16栋重庆市渝中区解放西路66号16栋</p>
+						</div>
+					</div>
+
+					<div class="weui-media-box weui-media-box_appmsg">
+						<div class="weui-media-box__hd">
+							<img class="weui-media-box__thumb" src="http://pic.58pic.com/58pic/13/66/22/58x58PICXTV_1024.jpg">
+						</div>
+						<div class="weui-media-box__bd">
+							<h4 class="weui-media-box__title">渝中区解放西路家具搬迁家具搬迁，便宜出，便宜出售</h4>
+							<div class="wechat-content-option" style="">
+								<div class="wechat-content-price">¥500.00</div>
+								<div class="wechat-content-btnGroup">
+									<button><i class="fa fa-phone"></i> 邹朝亮</button>
+								</div>
+							</div>
+							<p class="wechat-content-address" style=""><i class="fa fa-map-marker"></i> 重庆市渝中区解放西路66号16栋重庆市渝中区解放西路66号16栋</p>
+						</div>
+					</div>
+
+					<div class="weui-media-box weui-media-box_appmsg">
+						<div class="weui-media-box__hd">
+							<img class="weui-media-box__thumb" src="http://pic.58pic.com/58pic/13/66/22/58x58PICXTV_1024.jpg">
+						</div>
+						<div class="weui-media-box__bd">
+							<h4 class="weui-media-box__title">渝中区解放西路家具搬迁家具搬迁，便宜出，便宜出售</h4>
+							<div class="wechat-content-option" style="">
+								<div class="wechat-content-price">¥500.00</div>
+								<div class="wechat-content-btnGroup">
+									<button><i class="fa fa-phone"></i> 邹朝亮</button>
+								</div>
+							</div>
+							<p class="wechat-content-address" style=""><i class="fa fa-map-marker"></i> 重庆市渝中区解放西路66号16栋重庆市渝中区解放西路66号16栋</p>
+						</div>
+					</div>
+
+					<div class="weui-media-box weui-media-box_appmsg">
+						<div class="weui-media-box__hd">
+							<img class="weui-media-box__thumb" src="http://pic.58pic.com/58pic/13/66/22/58x58PICXTV_1024.jpg">
+						</div>
+						<div class="weui-media-box__bd">
+							<h4 class="weui-media-box__title">渝中区解放西路家具搬迁家具搬迁，便宜出，便宜出售</h4>
+							<div class="wechat-content-option" style="">
+								<div class="wechat-content-price">¥500.00</div>
+								<div class="wechat-content-btnGroup">
+									<button><i class="fa fa-phone"></i> 邹朝亮</button>
+								</div>
+							</div>
+							<p class="wechat-content-address" style=""><i class="fa fa-map-marker"></i> 重庆市渝中区解放西路66号16栋重庆市渝中区解放西路66号16栋</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="weui-loadmore">
+				<i class="weui-loading"></i>
+				<span class="weui-loadmore__tips">正在加载</span>
+			</div>
+
+			<div class="weui-loadmore weui-loadmore_line" style="display: none;">
+				<span class="weui-loadmore__tips">暂无数据</span>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/jquery-2.1.0.min.js"></script>
+	<script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/jquery-weui.min.js"></script>
+	<script type="text/javascript" src="../js/wechat-base.js"></script>
+	<script type="text/javascript" src="../js/merchant-base.js"></script>
+	<script>
+		$(".wechat-content").pullToRefresh(function() {
+			setTimeout(function() {
+				$(".wechat-content").pullToRefreshDone();
+			}, 2000);
+		});
+
+		var loading = false;
+		var count = 0;
+		$(".wechat-content").infinite().on("infinite", function() {
+			if(loading) return;
+			loading = true;
+			setTimeout(function() {
+				loading = false;
+				count++;
+
+				//停止加載
+				if(count > 2) {
+					$(".wechat-content").destroyInfinite();
+					$(".weui-loadmore").css("display", "none");
+					$(".weui-loadmore_line").css("display", "block");
+				} else {
+					$(".weui-panel__bd").append("<p> 我是新加载的内容 我是新加载的内容 我是新加载的内容 我是新加载的内容 我是新加载的内容 我是新加载的内容 我是新加载的内容 我是新加载的内容 我是新加载的内容 我是新加载的内容 我是新加载的内容 我是新加载的内容 我是新加载的内容 我是新加载的内容 我是新加载的内容 我是新加载的内容 我是新加载的内容 我是新加载的内容 我是新加载的内容 我是新加载的内容 我是新加载的内容 我是新加载的内容 我是新加载的内容 我是新加载的内容 我是新加载的内容 我是新加载的内容 我是新加载的内容 我是新加载的内容 我是新加载的内容 我是新加载的内容 </p>");
+				}
+			}, 1500); //模拟延迟
+
+		});;
+
+		$(function() {
+			$('.weui-tabbar__item').on('click', function() {
+				$(this).addClass('weui-bar__item_on').siblings('.weui-bar__item_on').removeClass('weui-bar__item_on');
+			});
+		});
+
+		/*$("#description").on("input",function(){
+			var desc = $(this).val();
+			var len = desc.length;
+			$("#wordNumber").html(len);
+			if(len > 200){
+				$(this).val(desc.substring(0,200))
+			}
+		});*/
+
+		/*$("#buyDate").calendar({
+			dateFormat: 'yyyy-mm-dd',
+			value: ['2018-03-05']
+		});*/
+	</script>
+
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html class="pixel-ratio-3 retina android android-5 android-5-0">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+		<title></title>
+		<link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.2/style/weui.min.css">
+		<link rel="stylesheet" href="https://cdn.bootcss.com/jquery-weui/1.2.0/css/jquery-weui.min.css">
+		<link rel="stylesheet" href="../css/font-awesome.css">
+		<link rel="stylesheet" href="../css/wechat.css">
+		<style type="text/css">
+			.weui-uploader__files img {
+				width: 100%;
+				height: 100%
+			}
+			.weui-uploader__files li{
+				border: 1px solid #ddd;
+			}
+			.weui-uploader__files li.title{
+				border: 1px solid #1AAD19;
+			}
+			
+			
+			
+		</style>
+	</head>
+
+	<body>
+
+		<header class="wechat-header">
+			<a class="icon-back"><i class="fa fa-chevron-left"></i></a>
+			<h1>商户认证</h1>
+		</header>
+
+		<div class="wechat-content">
+			<div class="weui-cells__title">审核失败</div>
+			<div class="weui-cells weui-cells_form">
+				<div class="weui-cell">
+					<div class="weui-cell__bd">
+						<textarea id="description" class="weui-textarea" style="color: #FF4040;font-size: 12px;" rows="3">审核失败！营业执照与商户名称不一致!</textarea>
+					</div>
+				</div>
+			</div>
+			
+			<div class="weui-cells__title">审核中</div>
+			<div class="weui-cells weui-cells_form">
+				<div class="weui-cell">
+					<div class="weui-cell__bd">
+						<textarea id="description" class="weui-textarea" style="font-size: 12px;" rows="3">商户认证正在审核中，请耐心等待回复！</textarea>
+					</div>
+				</div>
+			</div>
+			
+			<div class="weui-cells__title">审核成功</div>
+			<div class="weui-cells weui-cells_form">
+				<div class="weui-cell">
+					<div class="weui-cell__bd">
+						<textarea id="description" class="weui-textarea" style="color:#76EE00;font-size: 12px;" rows="3">商户信息成功认证！</textarea>
+					</div>
+				</div>
+			</div>
+			
+			<div class="weui-cells__title">商户信息</div>
+			<div class="weui-cells weui-cells_form">
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">商户名称</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" name="merchantName" type="text" placeholder="需与营业执照名称一致'" />
+					</div>
+				</div>
+
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">注册号</label></div>
+					<div class="weui-cell__bd">
+						<input id="furnitureType" type="hidden" />
+						<input id="furnitureTypeName" name="merchantCreditCode" class="weui-input" type="text" placeholder="注册号或统一社会信用代码" />
+					</div>
+				</div>
+
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">联系人</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="text" placeholder="请输入联系人" />
+					</div>
+				</div>
+				
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">商户地址</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="text" placeholder="请输入商户地址" />
+					</div>
+				</div>
+				
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">邮箱</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="text" placeholder="请输入邮箱" />
+					</div>
+				</div>
+				
+			</div>
+
+			<!-- 图片上传 -->
+			<div class="weui-cells__title">营业执照</div>
+			<div class="weui-cells weui-cells_form">
+				<div class="weui-cell">
+					<div class="weui-cell__bd">
+						<div class="weui-uploader">
+							<div class="weui-uploader__bd">
+								<ul class="weui-uploader__files" id="uploaderFiles">
+									<li class="weui-uploader__file">
+										<img src="http://img.taopic.com/uploads/allimg/120727/201995-120HG1030762.jpg" />
+									</li>
+								</ul>
+								<div class="weui-uploader__input-box">
+									<input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="weui-btn-area">
+				<a class="weui-btn weui-btn_primary" href="javascript:" id="showTooltips">提交认证</a>
+			</div>
+		</div>
+
+	</body>
+	<script type="text/javascript" src="../js/jquery-2.1.0.min.js"></script>
+	<script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/jquery-weui.min.js"></script>
+	<script type="text/javascript" src="../js/wechat-base.js"></script>
+	<script type="text/javascript" src="https://cdn.staticfile.org/qiniu-js-sdk/1.0.14-beta/qiniu.js"></script>
+	<script>
+		$("#furnitureTypeName").select({
+			title: "请选择家具分类",
+			items: [{
+					title: "办公家具",
+					value: "001",
+				},
+				{
+					title: "家用家具",
+					value: "002",
+
+				},
+				{
+					title: "卧室家具",
+					value: "003",
+				}
+			],
+			onChange: function() {
+				$("#furnitureType").val($("#furnitureTypeName").data("values"))
+			}
+		});
+		
+		$("#uploaderFiles li").on("click",function(){
+			var $img = $(this);
+			$.actions({
+			  actions: [{
+			    text: "设为标题图",
+			    className: "color-success",
+			    onClick: function() {
+			    	$("#uploaderFiles li").removeClass("title")
+			   		$img.addClass("title")
+			    }
+			  },{
+			    text: "删除",
+			    className: "color-danger",
+			    onClick: function() {
+			    	
+			    }
+			  }]
+			});
+		});
+		
+		/*$("#description").on("input",function(){
+			var desc = $(this).val();
+			var len = desc.length;
+			$("#wordNumber").html(len);
+			if(len > 200){
+				$(this).val(desc.substring(0,200))
+			}
+		});*/
+
+		/*$("#buyDate").calendar({
+			dateFormat: 'yyyy-mm-dd',
+			value: ['2018-03-05']
+		});*/
+	</script>
+
+</html>
