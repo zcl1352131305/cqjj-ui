@@ -2,9 +2,9 @@
 	height: 100%;
 }
 .weui-panel__bd .weui-media-box__title{
-	color: #333;
-	font-weight: bold;
-	font-size: 14px !important;
+	color: #555;
+	font-size: 13px !important;
+	font-family: "微软雅黑";
 }
 .wechat-list-img-2{
 	width: 100%;
@@ -22,16 +22,16 @@
 }
 .weui-media-box_appmsg .weui-media-box__hd{
 	margin-right: .6em !important;
-	width: 120px !important;
-	height: 80px !important;
+	width: 133px !important;
+	height: 100px !important;
 }
 .weui-media-box__bd{
-	height: 80px !important;
+	height: :;0px !important;
 }
 .weui-media-box__info{
 	margin-top: 10px;
 	padding-bottom: 0px;
-	font-size: 12px;
+	font-size: 10px;
 }
 .weui-media-box_text .weui-media-box__title{
 	white-space:normal;

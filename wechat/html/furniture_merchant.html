@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html class="pixel-ratio-3 retina android android-5 android-5-0">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+		<title></title>
+		<link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.2/style/weui.min.css">
+		<link rel="stylesheet" href="https://cdn.bootcss.com/jquery-weui/1.2.0/css/jquery-weui.min.css">
+		<link rel="stylesheet" href="../css/font-awesome.css">
+		<link rel="stylesheet" href="../css/wechat.css">
+		<style type="text/css">
+			.weui-tab{
+				position:inherit
+			}
+			.weui-tabbar{
+				background: #fff;
+			}
+			.merchant_title{
+				width:100%;
+				height: 150px;
+				background: #fff;
+				text-align: center;
+			
+			}
+			.merchant_title img{
+				margin-top: 20px;
+				width: 46px;
+				height: 46px;
+				border-radius: 25%;
+				background: #1AB394;
+				padding: 10px;
+			}
+			.merchant_title p.name{
+				font-weight: bold;
+				color: #444444;
+			}
+			.merchant_title p.account{
+				font-size: 12px;
+				color: #999;
+			}
+			
+			.weui-navbar{
+				position: relative;
+			}
+			
+			
+			
+		</style>
+	</head>
+
+	<body>
+
+		<header class="wechat-header">
+			<h1>商户店铺</h1>
+		</header>
+
+		<div class="wechat-content">
+			<div class="weui-tab">
+				<div class="weui-tab__bd">
+					<div class="merchant_title">
+						<img src="../img/icon/icon-dianpu.png" />
+						<p class="name">渝中区鑫科办公家具回收经营部</p>
+						<p class="account">电话号码：18523977614</p>
+					</div>
+					<div class="weui-navbar">
+					  <div class="weui-navbar__item weui_bar__item_on">
+					    选项一
+					  </div>
+					  <div class="weui-navbar__item">
+					    选项二
+					  </div>
+					  <div class="weui-navbar__item">
+					    选项三
+					  </div>
+					   <div class="weui-navbar__item">
+					    选项三
+					  </div>
+					   <div class="weui-navbar__item">
+					    选项三
+					  </div>
+					   <div class="weui-navbar__item">
+					    选项三
+					  </div>
+					   <div class="weui-navbar__item">
+					    选项三
+					  </div>
+					</div>
+					
+				    
+				    
+					
+
+				</div>	
+
+				<!--<div class="weui-tabbar">
+					<a id="main" href="javascript:;" class="weui-tabbar__item">
+						<div class="weui-tabbar__icon">
+							<img src="../img/icon/icon-main.png" alt="">
+						</div>
+						<p class="weui-tabbar__label" style="color: #1296db;">首页</p>
+					</a>
+					<a id="recycle" href="javascript:;" class="weui-tabbar__item">
+						<div class="weui-tabbar__icon">
+							<img src="../img/icon/icon-recyle-o.png" alt="">
+						</div>
+						<p class="weui-tabbar__label">旧家具回收</p>
+					</a>
+					<a id="merchant" href="javascript:;" class="weui-tabbar__item">
+						<div class="weui-tabbar__icon">
+							<img src="../img/icon/icon-store-o.png" alt="">
+						</div>
+						<p class="weui-tabbar__label">我的商户</p>
+					</a>
+				</div>-->
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/jquery-2.1.0.min.js"></script>
+	<script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/jquery-weui.min.js"></script>
+	<script type="text/javascript" src="../js/wechat-base.js"></script>
+	<script type="text/javascript" src="../js/merchant-base.js"></script>
+	<script>
+		
+		
+		$(function() {
+			$('.weui-tabbar__item').on('click', function() {
+				$(this).addClass('weui-bar__item_on').siblings('.weui-bar__item_on').removeClass('weui-bar__item_on');
+			});
+		});
+
+		/*$("#description").on("input",function(){
+			var desc = $(this).val();
+			var len = desc.length;
+			$("#wordNumber").html(len);
+			if(len > 200){
+				$(this).val(desc.substring(0,200))
+			}
+		});*/
+
+		/*$("#buyDate").calendar({
+			dateFormat: 'yyyy-mm-dd',
+			value: ['2018-03-05']
+		});*/
+	</script>
+
+</html>
